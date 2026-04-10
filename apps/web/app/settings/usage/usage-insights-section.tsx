@@ -28,7 +28,7 @@ function formatLookbackLabel(lookbackDays: number): string {
 
 export function UsageInsightsSection({ insights }: UsageInsightsSectionProps) {
   const lookbackLabel = formatLookbackLabel(insights.lookbackDays);
-  const prDetail = `${insights.pr.mergedPrCount} merged · ${insights.pr.openPrCount} open · ${insights.pr.closedPrCount} closed`;
+  const prDetail = `${insights.pr.mergedPrCount} merged · ${insights.pr.openPrCount} open`;
 
   return (
     <div className="space-y-6">

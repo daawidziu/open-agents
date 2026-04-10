@@ -308,7 +308,11 @@ function ProfileSidebar({
 
       {/* Stats */}
       {totals && (
-        <div className="rounded-lg border border-border/50 bg-muted/10 px-4 py-1 divide-y divide-border/50">
+        <div className="space-y-3">
+          <h3 className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            Usage
+          </h3>
+          <div className="rounded-lg border border-border/50 bg-muted/10 px-4 py-1 divide-y divide-border/50">
           <StatItem label="Total tokens" value={formatTokens(totalTokens)} />
           <StatItem
             label="Messages"
@@ -318,6 +322,7 @@ function ProfileSidebar({
             label="Tool calls"
             value={totals.toolCallCount.toLocaleString()}
           />
+        </div>
         </div>
       )}
 
