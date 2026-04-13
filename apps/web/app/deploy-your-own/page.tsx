@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const DEPLOY_ENV_VARS = [
-  "POSTGRES_URL",
+  "DATABASE_URL",
   "JWE_SECRET",
   "ENCRYPTION_KEY",
   "NEXT_PUBLIC_VERCEL_APP_CLIENT_ID",
@@ -45,7 +45,7 @@ const DEPLOY_TEMPLATE_URL = (() => {
     ["env", DEPLOY_ENV_VARS.join(",")],
     [
       "envDescription",
-      "Neon can provide POSTGRES_URL automatically. Generate JWE_SECRET and ENCRYPTION_KEY yourself, then add your Vercel OAuth and GitHub App credentials for a full deployment.",
+      "Neon can provide DATABASE_URL automatically. Generate JWE_SECRET and ENCRYPTION_KEY yourself, then add your Vercel OAuth and GitHub App credentials for a full deployment.",
     ],
     ["products", encodeURIComponent(JSON.stringify(DEPLOY_PRODUCTS))],
     ["skippable-integrations", "1"],

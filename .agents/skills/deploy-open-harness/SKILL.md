@@ -64,7 +64,7 @@ Use this checklist when guiding the user.
 
 ### Required for the app to run
 
-- `POSTGRES_URL`
+- `DATABASE_URL`
 - `JWE_SECRET`
 
 ### Required for a usable hosted deployment
@@ -93,7 +93,7 @@ Use this checklist when guiding the user.
 ## How to explain each credential
 
 ### PostgreSQL
-Tell the user to create a Postgres database and copy the connection string into `POSTGRES_URL`.
+Tell the user to create a Postgres database and copy the connection string into `DATABASE_URL`.
 
 ### JWE secret
 Explain that this is required for session encryption.
@@ -163,7 +163,7 @@ Guide the user through this sequence:
 1. Fork the repo.
 2. Import it into Vercel at the repo root.
 3. Add the baseline env vars:
-   - `POSTGRES_URL`
+   - `DATABASE_URL`
    - `JWE_SECRET`
    - `ENCRYPTION_KEY`
 4. Deploy once to get a stable production URL.

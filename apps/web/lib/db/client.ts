@@ -9,10 +9,10 @@ let _db: DrizzleClient | null = null;
 export const db = new Proxy({} as DrizzleClient, {
   get(_, prop) {
     if (!_db) {
-      if (!process.env.POSTGRES_URL) {
-        throw new Error("POSTGRES_URL environment variable is required");
+      if (!process.env.DATABASE_URL) {
+        throw new Error("DATABASE_URL environment variable is required");
       }
-      const client = postgres(process.env.POSTGRES_URL);
+      const client = postgres(process.env.DATABASE_URL);
       _db = drizzle(client, { schema });
     }
     return Reflect.get(_db, prop);
